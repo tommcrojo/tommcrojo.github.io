@@ -44,6 +44,7 @@ main {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Aligns content to the left */
 }
 
 .experience {
@@ -72,29 +73,31 @@ ul {
 }
 
 .project-images {
-    display: flex;
-    gap: 1rem;
     margin-top: 1rem;
 }
 
-.image-card {
-    width: calc(50% - 0.5rem);
-    background-color: #f3f2ef;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
+.image-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-.rounded-image {
-    width: 100%;
-    height: auto;
+.fixed-image {
+    width: 120px; /* Fixed width */
+    height: 90px; /* Fixed height, keeping the 4:3 aspect ratio */
     border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.image-info {
+    max-width: 700px;
+}
+
+.image-info strong {
+    display: block;
+    font-weight: bold;
     margin-bottom: 0.5rem;
-}
-
-.image-info h4 {
-    margin: 0;
-    color: #0073b1;
+    font-size: 1rem;
 }
 
 footer {
@@ -110,11 +113,14 @@ footer {
         flex-direction: column;
     }
 
-    .project-images {
+    .image-item {
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    .image-card {
+    .fixed-image {
         width: 100%;
+        height: auto;
+        margin-bottom: 0.5rem;
     }
 }
